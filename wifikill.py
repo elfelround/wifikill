@@ -132,6 +132,7 @@ if choice.isdigit():
   try:
     while True:
       poison(victim[0], victim[1], gateway_ip)
+      time.sleep(1)
   except KeyboardInterrupt:
       restore(victim[0], victim[1], gateway_ip, gateway_mac)
       print '\nYou\'re welcome!'
@@ -142,6 +143,7 @@ elif killall:
     while True:
       for victim in devices:
         poison(victim[0], victim[1], gateway_ip)
+        time.sleep(1)
   except KeyboardInterrupt:
     for victim in devices:
       restore(victim[0], victim[1], gateway_ip, gateway_mac)
